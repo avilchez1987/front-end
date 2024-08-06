@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Usuarios</title>
+    <link rel="stylesheet" href="styles/crear-usuario.css">  
+    <script src="scripts/verificar-logueo.js"></script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+        <div class="container">
+            <div id="menu-lateral-container"></div>
+
+            <section class="dashboard-container">
+                <h3>Registrar Nuevo Sector</h3>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="sector">Sector:</label>
+                        <input type="text" id="sector" name="sector" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Registrar</button>
+                    </div>                                  
+                    <div id="errorMessages"></div>
+                    
+                </form>
+            </section>
+        </div>
+    </main>
+    <script type="module" src="scripts/crear-sector.js" defer></script>
+    <script src="components/load-header.js"></script>
+    <script src="components/load-menu-lateral.js"></script>
+</body>
+</html>

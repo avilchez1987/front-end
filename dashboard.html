@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Usuarios</title>
+    <link rel="stylesheet" href="styles/dashboard.css">  
+    <script src="scripts/verificar-logueo.js"></script> 
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+        <div class="container">
+            <div id="menu-lateral-container"></div>
+
+            <section class="dashboard-container">
+                <div class="dashboard-block">
+                    <h2>Total de Usuarios</h2>
+                    <div class="user-count" id="userCount">0</div>
+                </div>
+                <div class="dashboard-block">
+                    <h2>Usuarios Activos</h2>
+                    <div class="user-count" id="usuarioActivo">0</div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script type="module" src="scripts/dashboard.js" defer></script>
+    <script src="components/load-header.js"></script>
+    <script src="components/load-menu-lateral.js"></script>
+</body>
+</html>

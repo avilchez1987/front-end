@@ -1,0 +1,254 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+.user-info {
+    position: fixed; /* Fija el elemento en la ventana de visualización */
+    top: 0; /* Alinea al borde superior */
+    right: 0; /* Alinea al borde derecho */
+    display: flex; /* Usa flexbox para alinear los elementos hijos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    padding: 1em; /* Añade espacio alrededor del contenido */
+    background-color: #333; /* Color de fondo del contenedor */
+    color: white; /* Color del texto */
+    z-index: 1000; /* Asegura que el contenedor esté por encima de otros elementos */
+}
+
+.user-details {
+    display: flex; /* Usa flexbox para organizar los elementos dentro de este contenedor */
+    flex-direction: column; /* Muestra los elementos en una columna */
+    margin-right: 1em; /* Añade espacio a la derecha del bloque de información del usuario */
+    position: relative; /* Necesario para posicionar el menú desplegable */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa el ratón sobre el contenedor */
+}
+
+.user-details span {
+    margin-bottom: 0.5em; /* Espacio entre el nombre y el correo */
+}
+
+.dropdown-menu {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute; /* Posiciona el menú en relación al contenedor .user-details */
+    top: 100%; /* Coloca el menú justo debajo del contenedor */
+    right: 0; /* Alinea el menú al borde derecho del contenedor */
+    background-color: #fff; /* Color de fondo del menú */
+    color: #333; /* Color del texto del menú */
+    border: 1px solid #ccc; /* Borde del menú */
+    border-radius: 4px; /* Bordes redondeados del menú */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra del menú */
+    z-index: 1001; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+.dropdown-menu a {
+    display: block; /* Hace que cada ítem del menú ocupe toda la línea */
+    padding: 0.5em 1em; /* Espacio dentro de cada ítem */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Color del texto del enlace */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f4f4f4; /* Cambia el color de fondo al pasar el ratón sobre un ítem */
+}
+
+.user-info button {
+    background-color: #f44; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 0.5em 1em; /* Añade espacio dentro del botón */
+    cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
+}
+
+.user-info button:hover {
+    background-color: #d33; /* Cambia el color del botón al pasar el ratón sobre él */
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.search-panel {
+    margin-bottom: 20px;
+}
+
+.search-panel input {
+    width: calc(100% - 100px);
+    padding: 5px;
+}
+
+.search-panel button {
+    width: 90px;
+    padding: 5px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a.menu-item {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #444;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.menu > li > a.menu-item:hover {
+    background-color: #555;
+}
+
+.submenu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #555;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    border-radius: 5px;
+    z-index: 1000; /* Asegúrate de que esté en la parte superior */
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.submenu li a:hover {
+    background-color: #666;
+}
+
+/* Mostrar submenú cuando el elemento principal está en hover */
+.menu > li:hover .submenu {
+    display: block;
+}
+
+.dashboard-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dashboard-block {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.dashboard-block h2 {
+    margin: 0 0 10px;
+}
+
+.user-count {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+.dashboard-container {
+    max-width: 600px;
+    padding: 20px;
+    /*background-color: #fff;*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    border-radius: 8px;
+    margin-left: 20px; /* Mueve el contenedor hacia la izquierda */
+}
+
+
+form {
+    display: block; /* Asegura que el formulario ocupe todo el ancho disponible */
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center; /* Centra el contenido del grupo de formularios */
+}
+
+label {
+    flex: 1;
+    margin-right: 10px;
+    font-weight: bold;
+    text-align: right;
+}
+
+input, select {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+#errorMessages {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
