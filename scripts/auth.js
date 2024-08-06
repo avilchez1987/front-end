@@ -36,8 +36,8 @@ const removeToken = () => {
 // verificar-logueo.js
 //export const baseUrl = 'http://localhost:3000';
 
-export const baseUrl = 'http://localhost:3001/dev';
+//export const baseUrl = 'http://localhost:3001/dev';
 
 
 //AWS
-//export const baseUrl = 'https://i0745y63l8.execute-api.us-east-1.amazonaws.com/dev';
+export const baseUrl = 'https://tsl5r3wjxc.execute-api.us-east-1.amazonaws.com/dev';
